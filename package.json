@@ -1,0 +1,21 @@
+{
+  "name": "babylonjs-vite-boilerplate",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc && vite build",
+    "preview": "tsc && vite build && vite preview --host --open"
+  },
+  "typeRoots": [
+    "node_modules/@types",
+    "src/@types"
+  ],
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.2.7"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.0.0",
+    "@babylonjs/inspector": "^7.0.0"
+  }
+}
