@@ -4,13 +4,10 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "strict": true,
     "sourceMap": true,
-    "lib": [
-      "dom",
-      "ESNext"
-    ],
+    "lib": ["dom", "ESNext"],
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -19,7 +16,5 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true
   },
-  "include": [
-    "./src", "vite.config.js",
-  ]
+  "include": ["./src", "vite.config.js"]
 }

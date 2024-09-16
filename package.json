@@ -15,7 +15,8 @@
     "vite": "^5.2.7"
   },
   "dependencies": {
-    "@babylonjs/core": "^7.0.0",
-    "@babylonjs/inspector": "^7.0.0"
+    "@babylonjs/core": "^7.25.1",
+    "@babylonjs/inspector": "^7.25.1",
+    "recast-navigation": "^0.34.0"
   }
 }
