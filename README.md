@@ -18,6 +18,7 @@ This is a drop in replacement for the existing plugin. You don't need to change 
 ### How to use the plugin in your project
 - copy the `src/navigation` folder to your `src` directory.
 - you need to import the plugin included in this repo instead the one provided in the babylon.js libs.
+- `npm i recast-navigation`
 
 ### How to change the running mode of recast-navigation-js
 
