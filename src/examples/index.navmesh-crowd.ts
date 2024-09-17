@@ -14,14 +14,13 @@ import { Vector3 } from "@babylonjs/core/Maths/math.vector";
 import { TransformNode } from "@babylonjs/core/Meshes/transformNode";
 import { PointerEventTypes } from "@babylonjs/core/Events/pointerEvents";
 import { Mesh } from "@babylonjs/core/Meshes/mesh";
-import { AbstractMesh } from "@babylonjs/core/Meshes/abstractMesh";
 import { CreateGreasedLine } from "@babylonjs/core/Meshes/Builders/greasedLineBuilder";
 
 import {
     createNavMesh,
     setupNavigationPlugin,
 } from "../navigation/navigation.single-thread";
-import { createDebugNavMesh } from "../navigation/navigation-common";
+import { createDebugNavMesh } from "../navigation/navigation.common";
 
 export class NavigationCrowd {
     private _navigationPlugin?: INavigationEnginePlugin;

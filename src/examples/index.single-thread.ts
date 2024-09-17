@@ -8,7 +8,7 @@ import {
     createNavMesh,
     setupNavigationPlugin,
 } from "../navigation/navigation.single-thread";
-import { createDebugNavMesh } from "../navigation/navigation-common";
+import { createDebugNavMesh } from "../navigation/navigation.common";
 
 export class NavigationSingleThread {
     private _navigationPlugin?: INavigationEnginePlugin;
