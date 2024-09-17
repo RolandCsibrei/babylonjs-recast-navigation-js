@@ -27,8 +27,6 @@ Look at these file how to use and init recast-navigation-js in different modes.
 - Worker mode `src/navigation/navigation.single-thread.ts`
 - WASM mode `src/naviagtion/navigation.wasm.ts`
 
-And your are ready!
-
 ## Examples
 
 There are currently only two examples. The default one is the implementation of the playground code https://playground.babylonjs.com/#KVQP83#0 from the babylon.js docs.
