@@ -16,7 +16,7 @@ This is a drop in replacement for the existing plugin. You don't need to change 
 - For production: `npm run build` then to preview what was built `npm run preview`
 
 ### How to use the plugin in your project
-- copy the `src/navigation` folder to your `src` directory.
+- copy the `src/navigation` folder to your `src` directory. The plugin itself is located in the `src/navigation/plugin` folder. The other files are optional to use.
 - you need to import the plugin included in this repo instead the one provided in the babylon.js libs.
 - `npm i recast-navigation`
 
