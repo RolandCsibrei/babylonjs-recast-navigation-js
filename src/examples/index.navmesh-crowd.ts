@@ -162,7 +162,6 @@ export class NavigationCrowd {
         }
 
         let startingPoint;
-        let currentMesh;
 
         const getGroundPosition = () => {
             const pickinfo = this._scene.pick(
@@ -176,14 +175,14 @@ export class NavigationCrowd {
             return null;
         };
 
-        const pointerDown = (mesh: AbstractMesh) => {
+        const pointerHit = () => {
             if (!this._navigationPlugin) {
                 return;
             }
 
-            currentMesh = mesh;
-            startingPoint = getGroundPosition();
             const pathPoints = [];
+
+            startingPoint = getGroundPosition();
             if (startingPoint) {
                 const agents = crowd.getAgents();
                 for (let i = 0; i < agents.length; i++) {
@@ -219,8 +218,8 @@ export class NavigationCrowd {
         this._scene.onPointerObservable.add((pointerInfo) => {
             switch (pointerInfo.type) {
                 case PointerEventTypes.POINTERDOWN:
-                    if (pointerInfo.pickInfo?.pickedMesh) {
-                        pointerDown(pointerInfo.pickInfo.pickedMesh);
+                    if (pointerInfo.pickInfo?.hit) {
+                        pointerHit();
                     }
                     break;
             }
@@ -228,9 +227,11 @@ export class NavigationCrowd {
 
         const rotateAgent = (agentIdx: number) => {
             const agent = this._agents[agentIdx];
+
             agent.mesh.position = crowd.getAgentPosition(agent.idx);
-            const vel = crowd.getAgentVelocity(agent.idx);
             crowd.getAgentNextTargetPathToRef(agent.idx, agent.target.position);
+
+            const vel = crowd.getAgentVelocity(agent.idx);
             if (vel.length() > 0.2) {
                 vel.normalize();
                 const desiredRotation = Math.atan2(vel.x, vel.z);
