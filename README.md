@@ -25,7 +25,7 @@ This is a drop in replacement for the existing plugin. You don't need to change 
 Look at these file how to use and init recast-navigation-js in different modes.
 
 - Single thread mode `src/navigation/navigation.single-thread.ts`
-- Worker mode `src/navigation/navigation.single-thread.ts`
+- Worker mode `src/navigation/navigation-worker.ts`
 - WASM mode `src/naviagtion/navigation.wasm.ts`
 
 ## Examples
