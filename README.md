@@ -1,3 +1,5 @@
+This repo is no longer maintained and now is a part of the babylon.js ADDONS.
+
 # babylon.js + vite + ts + recast-navigation-js
 
 ## Description
